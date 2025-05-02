@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad - Production Engineer | Quicklime Industry</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+        }
+        .timeline-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 24px;
+            top: 32px;
+            height: calc(100% - 16px);
+            width: 2px;
+            background: #e5e7eb;
+        }
+        .skill-bar {
+            transition: width 1.5s ease-in-out;
+        }
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-1">
+                    <i class="fas fa-fire text-orange-500 text-2xl"></i>
+                    <span class="font-bold text-xl text-gray-800">Muhammad Resume</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="nav-link hover:text-orange-500">About</a>
+                    <a href="#experience" class="nav-link hover:text-orange-500">Experience</a>
+                    <a href="#skills" class="nav-link hover:text-orange-500">Skills</a>
+                    <a href="#projects" class="nav-link hover:text-orange-500">Projects</a>
+                    <a href="#contact" class="nav-link hover:text-orange-500">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-800 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white pb-4 px-4">
+            <a href="#about" class="block py-2 hover:text-orange-500">About</a>
+            <a href="#experience" class="block py-2 hover:text-orange-500">Experience</a>
+            <a href="#skills" class="block py-2 hover:text-orange-500">Skills</a>
+            <a href="#projects" class="block py-2 hover:text-orange-500">Projects</a>
+            <a href="#contact" class="block py-2 hover:text-orange-500">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="gradient-bg text-white">
+        <div class="max-w-6xl mx-auto px-4 py-20 md:py-32 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0 animate-on-scroll">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Muhammad Ashraf Hosni</h1>
+                <h2 class="text-2xl md:text-3xl font-semibold mb-6">Production Engineer | Quicklime Industry</h2>
+                <p class="text-lg mb-8 opacity-90">Expert in optimizing quicklime production processes with 5+ years of experience in industrial operations, quality control, and process improvement.</p>
+                <div class="flex space-x-4">
+                    <a href="#contact" class="bg-white text-orange-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition duration-300">Contact Me</a>
+                    <a href="https://drive.google.com/uc?export=download&id=1fSFChSB5M3SufS8QOtgbMdM3iBbDvMXW" class="border border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-orange-600 transition duration-300">Download CV</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center animate-on-scroll">
+                <div class="relative">
+                    <div class="w-64 h-64 md:w-80 md:h-80 rounded-full flex items-center justify-center shadow-2xl overflow-hidden">
+                        <!-- Profile image from Google Drive -->
+                        <img src="https://i.postimg.cc/26Jj54wv/A-young-man-wearing-a-black-summer-shirt-and-hi.webp" 
+                             alt="Muhammad - Production Engineer" 
+                             class="w-full h-full object-cover"
+                             onerror="this.src='https://via.placeholder.com/400x400?text=Profile+Image'">
+                    </div>
+                    <div class="absolute -bottom-5 -right-5 bg-white rounded-full p-4 shadow-lg">
+                        <i class="fas fa-industry text-3xl text-orange-500"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-16 relative">
+                <span class="relative inline-block">
+                    About Me
+                    <span class="absolute bottom-0 left-0 w-full h-1 bg-orange-500"></span>
+                </span>
+            </h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10 animate-on-scroll">
+                    <h3 class="text-2xl font-semibold mb-4">Process Optimization Specialist</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        With extensive experience in the quicklime production industry, I specialize in optimizing calcination processes, improving kiln efficiency, and implementing quality control measures to enhance production output while maintaining strict safety standards.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        My expertise includes troubleshooting operational issues, reducing energy consumption, and implementing continuous improvement initiatives that have resulted in significant cost savings for previous employers.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-orange-500 mr-2"></i>
+                            <span>Process Optimization</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-orange-500 mr-2"></i>
+                            <span>Quality Control</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-orange-500 mr-2"></i>
+                            <span>Kiln Operations</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-orange-500 mr-2"></i>
+                            <span>Safety Compliance</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 bg-gray-50 p-8 rounded-xl shadow-md animate-on-scroll">
+                    <h3 class="text-2xl font-semibold mb-6 text-center">Professional Highlights</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-orange-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-chart-line text-orange-500 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Increased Production Efficiency</h4>
+                                <p class="text-gray-600">Implemented process improvements that increased kiln output by 18% while reducing fuel consumption by 12%.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-orange-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-shield-alt text-orange-500 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Safety Record</h4>
+                                <p class="text-gray-600">Maintained zero lost-time accidents for 3 consecutive years through rigorous safety protocols and staff training.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-orange-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-cogs text-orange-500 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Equipment Expertise</h4>
+                                <p class="text-gray-600">Specialized knowledge of rotary kilns, vertical kilns, and ancillary equipment in quicklime production facilities.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-16 relative">
+                <span class="relative inline-block">
+                    Work Experience
+                    <span class="absolute bottom-0 left-0 w-full h-1 bg-orange-500"></span>
+                </span>
+            </h2>
+            <div class="relative">
+                <!-- Timeline -->
+                <div class="space-y-8">
+                    <!-- Experience 1 -->
+                    <div class="flex animate-on-scroll">
+                        <div class="flex-shrink-0 mr-6">
+                            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-orange-500 text-white">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                        </div>
+                        <div class="flex-1 pb-8">
+                            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                                <div class="flex justify between items-start">
+                                    <div>
+                                        <h3 class="text-xl font-semibold">Senior Production Engineer</h3>
+                                        <p class="text-orange-500 font-medium">Quicklime Manufacturing Co.</p>
+                                    </div>
+                                    <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">2020 - Present</span>
+                                </div>
+                                <ul class="mt-4 list-disc list-inside text-gray-600 space-y-2">
+                                    <li>Led a team of 15 operators in daily kiln operations, achieving consistent production targets</li>
+                                    <li>Implemented predictive maintenance program that reduced unplanned downtime by 30%</li>
+                                    <li>Developed new quality control procedures that improved product consistency</li>
+                                    <li>Spearheaded energy efficiency project saving $250,000 annually in fuel costs</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Experience 2 -->
+                    <div class="flex animate-on-scroll">
+                        <div class="flex-shrink-0 mr-6">
+                            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-orange-500 text-white">
+                                <i class="fas fa-industry"></i>
+                            </div>
+                        </div>
+                        <div class="flex-1 pb-8">
+                            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <h3 class="text-xl font-semibold">Production Engineer</h3>
+                                        <p class="text-orange-500 font-medium">Lime Solutions Ltd.</p>
+                                    </div>
+                                    <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">2017 - 2020</span>
+                                </div>
+                                <ul class="mt-4 list-disc list-inside text-gray-600 space-y-2">
+                                    <li>Optimized kiln feed rates resulting in 12% increase in production capacity</li>
+                                    <li>Reduced refractory brick replacement frequency by 40% through improved operational practices</li>
+                                    <li>Designed and implemented staff training program for new operators</li>
+                                    <li>Collaborated with maintenance team to extend equipment lifespan</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Experience 3 -->
+                    <div class="flex animate-on-scroll">
+                        <div class="flex-shrink-0 mr-6">
+                            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-orange-500 text-white">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <h3 class="text-xl font-semibold">Process Engineering Intern</h3>
+                                        <p class="text-orange-500 font-medium">National Lime Corporation</p>
+                                    </div>
+                                    <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">2016 - 2017</span>
+                                </div>
+                                <ul class="mt-4 list-disc list-inside text-gray-600 space-y-2">
+                                    <li>Assisted in daily production monitoring and data collection</li>
+                                    <li>Participated in process improvement initiatives</li>
+                    <li>Gained hands-on experience with kiln operations and maintenance</li>
+                    <li>Prepared technical reports on production metrics</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-16 relative">
+                <span class="relative inline-block">
+                    Technical Skills
+                    <span class="absolute bottom-0 left-0 w-full h-1 bg-orange-500"></span>
+                </span>
+            </h2>
+            <div class="grid md:grid-cols-2 gap-10">
+                <!-- Left Column -->
+                <div class="space-y-8 animate-on-scroll">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 flex items-center">
+                            <i class="fas fa-fire mr-2 text-orange-500"></i> Quicklime Production
+                        </h3>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="font-medium">Kiln Operations</span>
+                                    <span>95%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="skill-bar bg-orange-500 h-2.5 rounded-full" data-width="95"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="font-medium">Calcination Process</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="skill-bar bg-orange-500 h-2.5 rounded-full" data-width="90"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="font-medium">Quality Control</span>
+                                    <span>88%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="skill-bar bg-orange-500 h-2.5 rounded-full" data-width="88"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 flex items-center">
+                            <i class="fas fa-tools mr-2 text-orange-500"></i> Equipment & Maintenance
+                        </h3>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="font-medium">Rotary Kilns</span>
+                                    <span>92%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="skill-bar bg-orange-500 h-2.5 rounded-full" data-width="92"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="font-medium">Preventive Maintenance</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="skill-bar bg-orange-500 h-2.5 rounded-full" data-width="85"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="font-medium">Troubleshooting</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="skill-bar bg-orange-500 h-2.5 rounded-full" data-width="90"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column -->
+                <div class="space-y-8 animate-on-scroll">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 flex items-center">
+                            <i class="fas fa-chart-line mr-2 text-orange-500"></i> Process Optimization
+                        </h3>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="font-medium">Efficiency Improvement</span>
+                                    <span>88%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="skill-bar bg-orange-500 h-2.5 rounded-full" data-width="88"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="font-medium">Energy Conservation</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="skill-bar bg-orange-500 h-2.5 rounded-full" data-width="85"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="font-medium">Cost Reduction</span>
+                                    <span>82%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="skill-bar bg-orange-500 h-2.5 rounded-full" data-width="82"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 flex items-center">
+                            <i class="fas fa-shield-alt mr-2 text-orange-500"></i> Safety & Compliance
+                        </h3>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="font-medium">OSHA Standards</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="skill-bar bg-orange-500 h-2.5 rounded-full" data-width="90"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="font-medium">Environmental Compliance</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="skill-bar bg-orange-500 h-2.5 rounded-full" data-width="85"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="font-medium">Safety Training</span>
+                                    <span>92%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="skill-bar bg-orange-500 h-2.5 rounded-full" data-width="92"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Additional Skills -->
+            <div class="mt-16 animate-on-scroll">
+                <h3 class="text-xl font-semibold mb-6 text-center">Additional Competencies</h3>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <div class="bg-orange-100 text-orange-800 px-4 py-2 rounded-full flex items-center">
+                        <i class="fas fa-file-excel mr-2"></i> Data Analysis
+                    </div>
+                    <div class="bg-orange-100 text-orange-800 px-4 py-2 rounded-full flex items-center">
+                        <i class="fas fa-users mr-2"></i> Team Leadership
+                    </div>
+                    <div class="bg-orange-100 text-orange-800 px-4 py-2 rounded-full flex items-center">
+                        <i class="fas fa-project-diagram mr-2"></i> Project Management
+                    </div>
+                    <div class="bg-orange-100 text-orange-800 px-4 py-2 rounded-full flex items-center">
+                        <i class="fas fa-chart-pie mr-2"></i> Process Monitoring
+                    </div>
+                    <div class="bg-orange-100 text-orange-800 px-4 py-2 rounded-full flex items-center">
+                        <i class="fas fa-balance-scale mr-2"></i> Quality Assurance
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-16 relative">
+                <span class="relative inline-block">
+                    Key Projects
+                    <span class="absolute bottom-0 left-0 w-full h-1 bg-orange-500"></span>
+                </span>
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 animate-on-scroll">
+                    <div class="h-48 bg-orange-100 flex items-center justify-center">
+                        <i class="fas fa-bolt text-6xl text-orange-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Energy Efficiency Optimization</h3>
+                        <p class="text-gray-600 mb-4">Implemented advanced combustion control system that reduced fuel consumption by 15% while maintaining product quality.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-orange-100 text-orange-800 text-xs px-3 py-1 rounded-full">Kiln Optimization</span>
+                            <span class="bg-orange-100 text-orange-800 text-xs px-3 py-1 rounded-full">Energy Savings</span>
+                            <span class="bg-orange-100 text-orange-800 text-xs px-3 py-1 rounded-full">Process Control</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 animate-on-scroll">
+                    <div class="h-48 bg-orange-100 flex items-center justify-center">
+                        <i class="fas fa-recycle text-6xl text-orange-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Waste Heat Recovery System</h3>
+                        <p class="text-gray-600 mb-4">Designed and implemented system to capture and reuse waste heat, reducing overall energy costs by $180,000 annually.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-orange-100 text-orange-800 text-xs px-3 py-1 rounded-full">Sustainability</span>
+                            <span class="bg-orange-100 text-orange-800 text-xs px-3 py-1 rounded-full">Cost Reduction</span>
+                            <span class="bg-orange-100 text-orange-800 text-xs px-3 py-1 rounded-full">Innovation</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 animate-on-scroll">
+                    <div class="h-48 bg-orange-100 flex items-center justify-center">
+                        <i class="fas fa-robot text-6xl text-orange-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Automated Quality Control</h3>
+                        <p class="text-gray-600 mb-4">Developed automated sampling and testing system that improved product consistency and reduced manual labor requirements.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-orange-100 text-orange-800 text-xs px-3 py-1 rounded-full">Automation</span>
+                            <span class="bg-orange-100 text-orange-800 text-xs px-3 py-1 rounded-full">Quality</span>
+                            <span class="bg-orange-100 text-orange-800 text-xs px-3 py-1 rounded-full">Efficiency</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-16 relative">
+                <span class="relative inline-block">
+                    Get In Touch
+                    <span class="absolute bottom-0 left-0 w-full h-1 bg-orange-500"></span>
+                </span>
+            </h2>
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10 animate-on-scroll">
+                    <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+                    <p class="text-gray-600 mb-8">I'm interested in opportunities to optimize quicklime production processes. Feel free to reach out for consulting projects or full-time positions.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-orange-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-orange-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Email</h4>
+                                <p class="text-gray-600">muhammad.engineer@example.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-orange-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone-alt text-orange-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Phone</h4>
+                                <p class="text-gray-600">+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-orange-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-orange-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Location</h4>
+                                <p class="text-gray-600">Industrial District, Lime City, USA</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10">
+                        <h4 class="font-semibold mb-4">Connect with me</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-gray-100 hover:bg-orange-100 p-3 rounded-full text-gray-700 hover:text-orange-500 transition duration-300">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="bg-gray-100 hover:bg-orange-100 p-3 rounded-full text-gray-700 hover:text-orange-500 transition duration-300">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="bg-gray-100 hover:bg-orange-100 p-3 rounded-full text-gray-700 hover:text-orange-500 transition duration-300">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="bg-gray-100 hover:bg-orange-100 p-3 rounded-full text-gray-700 hover:text-orange-500 transition duration-300">
+                                <i class="fab fa-researchgate"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 animate-on-scroll">
+                    <form class="bg-gray-50 p-8 rounded-xl shadow-md">
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent" placeholder="John Doe">
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent" placeholder="john@example.com">
+                        </div>
+                        <div class="mb-6">
+                            <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent" placeholder="Regarding quicklime production">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent" placeholder="Your message here..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full gradient-bg text-white py-3 px-6 rounded-lg font-medium hover:opacity-90 transition duration-300">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-fire text-orange-500 text-2xl"></i>
+                        <span class="font-bold text-xl">Muhammad</span>
+                    </div>
+                    <p class="mt-2 text-gray-400">Production Engineer | Quicklime Industry Specialist</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#about" class="text-gray-400 hover:text-white transition duration-300">About</a>
+                    <a href="#experience" class="text-gray-400 hover:text-white transition duration-300">Experience</a>
+                    <a href="#skills" class="text-gray-400 hover:text-white transition duration-300">Skills</a>
+                    <a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Contact</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 Muhammad. All rights reserved.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Animate skill bars on scroll
+        function animateSkillBars() {
+            const skillBars = document.querySelectorAll('.skill-bar');
+            skillBars.forEach(bar => {
+                const width = bar.getAttribute('data-width');
+                bar.style.width = width + '%';
+            });
+        }
+
+        // Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    
+                    // If this is the skills section, animate the bars
+                    if (entry.target.id === 'skills' || entry.target.classList.contains('skill-section')) {
+                        animateSkillBars();
+                    }
+                }
+            });
+        }, {threshold: 0.1});
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Form submission
+        const form = document.querySelector('form');
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your message! I will get back to you soon.');
+                form.reset();
+            });
+        }
+    </script>
+</body>
+</html>
